@@ -128,23 +128,25 @@
 
 
 
-  <meta name="description" content="你看这个巴赫可爱不可爱.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ying Chen">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="What I updated for this version?">
+<meta name="keywords" content="upgrading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Powered by Hexo v3.8.0 | Theme – NexT.Mist v7.0.1">
+<meta property="og:url" content="http://yoursite.com/2019/03/05/20190305/index.html">
 <meta property="og:site_name" content="Ying Chen">
-<meta property="og:description" content="你看这个巴赫可爱不可爱.">
+<meta property="og:description" content="What I updated for this version?">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-03-05T11:47:26.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ying Chen">
-<meta name="twitter:description" content="你看这个巴赫可爱不可爱.">
+<meta name="twitter:title" content="Powered by Hexo v3.8.0 | Theme – NexT.Mist v7.0.1">
+<meta name="twitter:description" content="What I updated for this version?">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/05/20190305/">
 
 
 
@@ -154,7 +156,7 @@
   };
 </script>
 
-  <title>Ying Chen</title>
+  <title>Powered by Hexo v3.8.0 | Theme – NexT.Mist v7.0.1 | Ying Chen</title>
   
 
 
@@ -202,8 +204,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,7 +246,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -349,9 +350,8 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-expand">
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -383,10 +383,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/05/20190305/" class="post-title-link" itemprop="url">Powered by Hexo v3.8.0 | Theme – NexT.Mist v7.0.1</a>
+          <h1 class="post-title" itemprop="name headline">Powered by Hexo v3.8.0 | Theme – NexT.Mist v7.0.1
+
               
             
           </h1>
@@ -468,20 +466,17 @@
       
 
       
-        
-          <p>What I updated for this version?<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/05/20190305/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p>What I updated for this version?<br><a id="more"></a></p>
+<p><br></p>
+<h1 id="Fonts-Noto-Serif-SC"><a href="#Fonts-Noto-Serif-SC" class="headerlink" title="Fonts | Noto Serif SC"></a>Fonts | Noto Serif SC</h1><p>念叨了很久的<a href="https://source.typekit.com/source-han-serif/cn/" target="_blank" rel="noopener">思源宋体</a>终于加入了Google Fonts！<br>Path: <code>~/blog/themes/next-reloaded/_config.yml</code><br>但是通过Google Fonts部署，加载字体渲染有明显的卡顿，建议将 <code>googleapis.com</code> 修改为 <code>loli.net</code>（镜像）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).</span><br><span class="line">  host: https://fonts.loli.net</span><br><span class="line"></span><br><span class="line">  # Font options:</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: xx`. Use `px` as unit.</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Lato</span><br><span class="line">    #family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  headings:</span><br><span class="line">    external: false</span><br><span class="line">    family: Lato</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line">    #family: Lato</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">  # Font settings for Logo.</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">    </span><br><span class="line">  logo:</span><br><span class="line">    external: false</span><br><span class="line">    family: Lato</span><br><span class="line">    #family: Cambria</span><br><span class="line">    size: 24</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: true</span><br><span class="line">    family:</span><br><span class="line">    size:</span><br></pre></td></tr></table></figure>
+<h1 id="Post-Template"><a href="#Post-Template" class="headerlink" title="Post Template"></a>Post Template</h1><p>Path: <code>~blog/scaffolds/post.md</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [1, 2, 3]</span><br><span class="line">categories: Short Post</span><br><span class="line">mathjax: false</span><br><span class="line">copyright: false</span><br><span class="line">comment: true</span><br><span class="line">photo: </span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h1 id="Sidebar-Settings"><a href="#Sidebar-Settings" class="headerlink" title="Sidebar Settings"></a>Sidebar Settings</h1><p>Path: <code>~blog/themes/next-reloaded/config.yml</code></p>
+<h2 id="Sidebar-Display"><a href="#Sidebar-Display" class="headerlink" title="Sidebar Display"></a>Sidebar Display</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Display, available values (only for Muse | Mist):</span><br><span class="line"> #  - post    expand on posts automatically. Default.</span><br><span class="line"> #  - always  expand for all pages automatically.</span><br><span class="line"> #  - hide    expand only when click on the sidebar toggle icon.</span><br><span class="line"> #  - remove  totally remove sidebar including sidebar toggle.</span><br><span class="line"> display: hide</span><br></pre></td></tr></table></figure>
+<h2 id="Table-Of-Contents-in-the-Sidebar"><a href="#Table-Of-Contents-in-the-Sidebar" class="headerlink" title="Table Of Contents in the Sidebar"></a>Table Of Contents in the Sidebar</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Automatically add list number to toc.</span><br><span class="line">number: false</span><br></pre></td></tr></table></figure>
       
-    </p></div>
+    </div>
 
     
 
@@ -500,193 +495,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ying Chen">
-      <meta itemprop="description" content="你看这个巴赫可爱不可爱.">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ying Chen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2016/01/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-01-18 10:40:15" itemprop="dateCreated datePublished" datetime="2016-01-18T10:40:15+01:00">2016-01-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-05 12:00:27" itemprop="dateModified" datetime="2019-03-05T12:00:27+01:00">2019-03-05</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Blog-Building/" itemprop="url" rel="index"><span itemprop="name">Blog Building</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/upgrading/" rel="tag"># upgrading</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post.
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/01/18/hello-world/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/18/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -696,15 +534,15 @@
   </article>
 
 
-    
-  </section>
-
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -724,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -817,6 +664,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Fonts-Noto-Serif-SC"><span class="nav-text">Fonts | Noto Serif SC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Post-Template"><span class="nav-text">Post Template</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sidebar-Settings"><span class="nav-text">Sidebar Settings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sidebar-Display"><span class="nav-text">Sidebar Display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-Of-Contents-in-the-Sidebar"><span class="nav-text">Table Of Contents in the Sidebar</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -946,6 +810,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -956,6 +824,8 @@
   
   
 
+
+  
 
 
   

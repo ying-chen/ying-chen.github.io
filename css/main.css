@@ -1892,7 +1892,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3eaa;
+  background: #e46e1a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2859,4 +2859,7 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+h2.post-title-archive {
+  margin: 10px 100px 10px 20px;
 }
