@@ -259,21 +259,6 @@
         
         
           
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
-
-    
-
-    <a href="/about/" rel="section">About</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives menu-item-active">
 
     
@@ -289,7 +274,7 @@
         
         
           
-          <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -297,14 +282,14 @@
 
     
 
-    <a href="/tags/" rel="section">Tags</a>
+    <a href="/about/" rel="section">About</a>
 
   </li>
         
         
         
           
-          <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-leave-a-message">
 
     
     
@@ -312,7 +297,7 @@
 
     
 
-    <a href="/categories/" rel="section">Categories</a>
+    <a href="/leave-a-message/" rel="section">Leave a Message</a>
 
   </li>
 
@@ -325,9 +310,6 @@
     
 
     
-    
-      
-      
     
       
       
@@ -802,6 +784,35 @@
 
   
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'o2xRMeAnXDSS7J3gTGgRMkzk-gzGzoHsz',
+    appKey: 'YaYuuKmAX17XfIFqYIQzlTQa',
+    placeholder: '�ǳ�=name, ����=email, ��ַ=web',
+    avatar: 'retro',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
 
