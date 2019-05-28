@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Win10+Texlive+Texmaker">
+<meta name="keywords" content="LaTeX,in English">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Citation with Natbib package">
+<meta property="og:url" content="http://yoursite.com/2019/05/16/20190516/index.html">
+<meta property="og:site_name" content="Ying Chen">
+<meta property="og:description" content="Win10+Texlive+Texmaker">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-21T08:20:26.657Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Citation with Natbib package">
+<meta name="twitter:description" content="Win10+Texlive+Texmaker">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/16/20190516/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Citation with Natbib package | Ying Chen</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ying Chen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">It is OKAY to be NOT OKAY. 你看这个巴赫可爱不可爱.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+
+    
+
+    <a href="/" rel="section">Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+
+    
+
+    <a href="/about/" rel="section">About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-what's-on">
+
+    
+    
+    
+
+    
+
+    <a href="/whatson" rel="section">What's On</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+
+    
+
+    <a href="/archives/" rel="section">Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-english">
+
+    
+    
+    
+
+    
+
+    <a href="/tags/in-English/" rel="section">English</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/20190516/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ying Chen">
+      <meta itemprop="description" content="你看上面这个巴赫可爱不可爱.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ying Chen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Citation with Natbib package
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-16 14:43:55" itemprop="dateCreated datePublished" datetime="2019-05-16T14:43:55+02:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-21 10:20:26" itemprop="dateModified" datetime="2019-05-21T10:20:26+02:00">2019-05-21</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Happy-Coding/" itemprop="url" rel="index"><span itemprop="name">Happy Coding</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Win10+Texlive+Texmaker<br><a id="more"></a></p>
+</blockquote>
+<p><br></p>
+<p>Finally get a satisfactory way to generate elegant citation in term paper :-)</p>
+<h1 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h1><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">&#123;article&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">[utf8]</span><span class="string">&#123;inputenc&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">[english]</span><span class="string">&#123;babel&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">&#123;natbib&#125;</span></span> <span class="comment">%Import the natbib package and sets a bibliography and citation styles</span></span><br><span class="line"><span class="tag">\<span class="name">bibliographystyle</span><span class="string">&#123;newapa&#125;</span></span> <span class="comment">%Subject to citation type</span></span><br><span class="line"><span class="tag">\<span class="name">setcitestyle</span><span class="string">&#123;authoryear,open=&#123;(&#125;</span></span>,close=&#123;)&#125;&#125; <span class="comment">%The specific command to format the citation style</span></span><br><span class="line"><span class="tag">\<span class="name">title</span><span class="string">&#123;Natbib Example&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">author</span><span class="string">&#123;angelayc&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;document&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">maketitle</span></span></span><br><span class="line"></span><br><span class="line"><span class="tag">\<span class="name">section</span><span class="string">&#123;tests using the style&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span><span class="string">&#123;ll&#125;</span></span></span><br><span class="line">Style &amp; Example  <span class="tag">\<span class="name">\</span></span> <span class="tag">\<span class="name">hline</span></span></span><br><span class="line">Textual citation &amp; <span class="tag">\<span class="name">citet</span><span class="string">&#123;o1999doing,latexcompanion&#125;</span></span> <span class="tag">\<span class="name">\</span></span></span><br><span class="line">Parenthetical citation &amp; <span class="tag">\<span class="name">citep</span><span class="string">&#123;o1999doing,latexcompanion&#125;</span></span> <span class="tag">\<span class="name">\</span></span></span><br><span class="line">Only name &amp; <span class="tag">\<span class="name">citeauthor</span><span class="string">&#123;latexcompanion&#125;</span></span> <span class="tag">\<span class="name">\</span></span></span><br><span class="line">Only year &amp; <span class="tag">\<span class="name">citeyear</span><span class="string">&#123;latexcompanion&#125;</span></span>	<span class="tag">\<span class="name">\</span></span></span><br><span class="line">Given examples &amp; <span class="tag">\<span class="name">cite</span><span class="string">[see]</span><span class="string">[chap 2]</span><span class="string">&#123;latexcompanion&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="tag">\<span class="name">bibliography</span><span class="string">&#123;sample&#125;</span></span> <span class="comment">%Imports the bibliography file "sample.bib"</span></span><br><span class="line"></span><br><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;document&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="Choice-on-bibliographystyle-apa"><a href="#Choice-on-bibliographystyle-apa" class="headerlink" title="Choice on\bibliographystyle{apa}"></a>Choice on<code>\bibliographystyle{apa}</code></h1><ul>
+<li>I use <code>{newapa}</code>, the APA style, seems the best alternative plan for Harvard style.</li>
+<li>Other choices: apa, agsm, apalike, astron, authordate1, authordate2, authordate3, authordate4, bbs, cbe, chicago, chicagoa, dcu, humanbio, humannat, jas99, jmb, jtb, kluwer, named, phppcf, plainnat</li>
+</ul>
+<h1 id="Changes-on-parameter-of-setcitestyle"><a href="#Changes-on-parameter-of-setcitestyle" class="headerlink" title="Changes on parameter of \setcitestyle"></a>Changes on parameter of <code>\setcitestyle</code></h1><ul>
+<li>Citation mode: <code>authoryear</code> , <code>number</code> , <code>super</code> </li>
+<li>Brackets: <code>round</code> , <code>square</code>, and any other format with <code>open={char}, close={char}</code></li>
+</ul>
+<h1 id="Citation-commands-in-text"><a href="#Citation-commands-in-text" class="headerlink" title="Citation commands in text"></a>Citation commands in text</h1><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\citet{Asp49,And80}</code></td>
+<td>Aspin (1949); Andrews et al. (1980)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\citep{Asp49,And80}</code></td>
+<td>(Aspin 1949; Andrews et al. 1980)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\citeauthor{And80}</code></td>
+<td>Andrews et al.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\citeyear{And80}</code></td>
+<td>1980</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\cite[see][chap 1]{And80}</code></td>
+<td>(see Andrews et al., 1980, chap 1 )</td>
+<td>faefv</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sample-bib"><a href="#sample-bib" class="headerlink" title="sample.bib"></a>sample.bib</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@article&#123;o1999doing,</span><br><span class="line">  <span class="attr">title=&#123;Doing</span> it now <span class="literal">or</span> later&#125;,</span><br><span class="line">  <span class="attr">author=&#123;O'Donoghue,</span> Ted <span class="literal">and</span> Rabin, Matthew&#125;,</span><br><span class="line">  <span class="attr">journal=&#123;American</span> Economic Review&#125;,</span><br><span class="line">  <span class="attr">volume=&#123;89&#125;,</span></span><br><span class="line">  <span class="attr">number=&#123;1&#125;,</span></span><br><span class="line">  <span class="attr">pages=&#123;103--124&#125;,</span></span><br><span class="line">  <span class="attr">year=&#123;1999&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Some-notes-in-‘Options’"><a href="#Some-notes-in-‘Options’" class="headerlink" title="Some notes in ‘Options’"></a>Some notes in ‘Options’</h1><ul>
+<li><code>Options</code> –&gt; <code>Commands</code> –&gt;  <code>Bib(la)tex</code> –&gt; <code>bibtex %</code> , in order to avoid <code>ERROR - Cannot find control file &#39;thesis-ref.bcf&#39;!</code> due to <code>Natbib</code> ; while sometimes should use <code>biber %</code> instead.</li>
+<li><code>Options</code> –&gt; <code>Quick Build</code> –&gt; <code>Quick Build Command</code> –&gt; <code>PdfLaTex + Bib(la)tex + PdfLaTex*2 + View PdF</code></li>
+<li>F6 + F11 + F6 + F6 + F7</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+          
+            <a href="/tags/in-English/" rel="tag"># in English</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/05/20190305/" rel="next" title="玄学">
+                <i class="fa fa-chevron-left"></i> 玄学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/21/20190620/" rel="prev" title="Welcome">
+                Welcome <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Ying Chen">
+            
+              <p class="site-author-name" itemprop="name">Ying Chen</p>
+              <div class="site-description motion-element" itemprop="description">你看上面这个巴赫可爱不可爱.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Template"><span class="nav-text">Template</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Choice-on-bibliographystyle-apa"><span class="nav-text">Choice on\bibliographystyle{apa}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Changes-on-parameter-of-setcitestyle"><span class="nav-text">Changes on parameter of \setcitestyle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Citation-commands-in-text"><span class="nav-text">Citation commands in text</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sample-bib"><span class="nav-text">sample.bib</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-notes-in-‘Options’"><span class="nav-text">Some notes in ‘Options’</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ying Chen</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="Total Views">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'o2xRMeAnXDSS7J3gTGgRMkzk-gzGzoHsz',
+    appKey: 'YaYuuKmAX17XfIFqYIQzlTQa',
+    placeholder: 'Just to go.',
+    avatar: 'retro',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
