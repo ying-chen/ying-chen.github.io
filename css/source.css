@@ -53,12 +53,12 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: Baskerville, Garamond, "Times New Roman", "Liberation Serif","Source Han Serif SC Regular"; serif;
+  font-family: "Source Han Serif SC Regular", Baskerville, "Times New Roman", "Liberation Serif","Source Han Serif SC Regular"; serif;
   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Baskerville, Garamond, "Liberation Serif", "Source Han Serif SC Regular", serif;
+  font-family: Baskerville, "Palatino Linotype", "Source Han Serif SC Regular", serif;
 }
 
 a {
