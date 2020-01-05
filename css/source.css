@@ -53,8 +53,8 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: "Source Han Serif SC Regular", Baskerville, "Times New Roman", "Liberation Serif", serif;
-  font-size: 16px;
+  font-family: "Palatino Linotype", "Source Han Serif SC Regular", Baskerville, "Times New Roman", "Liberation Serif", serif;
+  font-size: 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -392,7 +392,7 @@ blockquote {
         }
       }
     }
-
+    
     td,
     th,
     table caption,
@@ -400,7 +400,7 @@ blockquote {
     table th {
       word-break: initial;
     }
-
+    
     .pullquote {
       width: 45%;
       border: 0;
@@ -413,14 +413,14 @@ blockquote {
       float: right;
       text-align: right;
     }
-
+    
     .video-container {
       position: relative;
       padding-top: 56.25%;
       margin-bottom: 30px;
       height: 0;
       overflow: hidden;
-
+    
       iframe {
         position: absolute;
         top: 0;
